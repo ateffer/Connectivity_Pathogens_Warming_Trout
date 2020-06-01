@@ -61,7 +61,11 @@ ggplot(pop.df2, aes(x=variable, y=value, fill=pop)) +
   labs(y="Population size", x="Cycle") +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
-
+### Plot population size change over 100 cycles - log pop size
+ggplot(pop.df2, aes(x=variable, y=log10(value), fill=pop)) + 
+  geom_bar(stat = "identity") +
+  labs(y="Population size", x="Cycle") +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
 
 
