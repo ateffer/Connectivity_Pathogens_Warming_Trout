@@ -7,6 +7,7 @@ library(dplyr)
 library(reshape2)
 
 setwd("~/Smith Conservation Fellow/Smith BKT Data/R Smith")
+
 #Load packaages and set directory
 library(expm)    
 library(ggplot2)
