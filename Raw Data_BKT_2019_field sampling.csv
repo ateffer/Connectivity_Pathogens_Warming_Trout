@@ -1,0 +1,184 @@
+Fish ID,Date,Time,Weather,Watershed/Tributary,Temperature,FL (cm),Destructive,YOY?,Run on BioMark,Comments
+1,8/6/19,8:50,"Calm, sunny",Roaring 1,60,60,N,YOY,,
+2,8/6/19,8:50,"Calm, sunny",Roaring 1,60,116,N,,,
+3,8/6/19,8:50,"Calm, sunny",Roaring 1,60,104,N,,,
+4,8/6/19,8:50,"Calm, sunny",Roaring 1,60,63,N,YOY,BioMark,
+5,8/6/19,8:50,"Calm, sunny",Roaring 1,60,63,N,YOY,,
+6,8/6/19,9:22,"Calm, sunny",Roaring 1,60,60,N,YOY,,length estimated
+7,8/6/19,9:22,"Calm, sunny",Roaring 1,60,129,N,,,
+8,8/6/19,9:22,"Calm, sunny",Roaring 1,60,63,N,YOY,,
+9,8/6/19,9:22,"Calm, sunny",Roaring 1,60,124,N,,,
+10,8/6/19,9:22,"Calm, sunny",Roaring 1,60,100,N,,BioMark,
+11,8/6/19,10:34,"Calm, sunny",Roaring 2,63,48,N,YOY,,
+12,8/6/19,10:34,"Calm, sunny",Roaring 2,63,46,N,YOY,,
+13,8/6/19,10:34,"Calm, sunny",Roaring 2,63,88,N,,,
+14,8/6/19,11:00,"Calm, sunny",Roaring 2,63,119,N,,BioMark,
+15,8/6/19,11:00,"Calm, sunny",Roaring 2,63,108,N,,,
+16,8/6/19,11:00,"Calm, sunny",Roaring 2,63,108,N,,,
+17,8/6/19,11:00,"Calm, sunny",Roaring 2,63,44,N,YOY,,
+18,8/6/19,11:00,"Calm, sunny",Roaring 2,63,54,N,YOY,BioMark,
+19,8/6/19,12:00,"Calm, sunny",Roaring 3,59,114,N,,,slimy fish; dropped
+20,8/6/19,12:00,"Calm, sunny",Roaring 3,59,53,N,YOY,,
+21,8/6/19,12:00,"Calm, sunny",Roaring 3,59,60,N,YOY,,
+22,8/6/19,12:00,"Calm, sunny",Roaring 3,59,73,N,,,
+23,8/6/19,12:30,"Calm, sunny",Roaring 3,59,78,N,,BioMark,
+24,8/6/19,12:30,"Calm, sunny",Roaring 3,59,66,N,YOY,BioMark,
+25,8/6/19,12:30,"Calm, sunny",Roaring 3,59,114,N,,,
+38,8/6/19,16:30,"Calm, sunny",Roaring 5,65,163,N,,,
+39,8/6/19,16:30,"Calm, sunny",Roaring 5,65,68,N,YOY,BioMark,
+40,8/6/19,16:30,"Calm, sunny",Roaring 5,65,57,N,YOY,,
+41,8/6/19,16:30,"Calm, sunny",Roaring 5,65,172,N,,,
+42,8/8/19,11:30,"Calm, sunny",Roaring 4,68,68,N,YOY,,went into recovery
+43,8/8/19,11:30,"Calm, sunny",Roaring 4,68,74,N,YOY,,
+44,8/8/19,11:30,"Calm, sunny",Roaring 4,68,73,N,YOY,BioMark,
+45,8/8/19,11:30,"Calm, sunny",Roaring 4,68,64,N,YOY,,
+46,8/8/19,12:32,"Calm, sunny",Roaring 4,68,70,N,YOY,,
+47,8/8/19,12:32,"Calm, sunny",Roaring 4,68,70,N,YOY,,
+48,8/8/19,12:32,"Calm, sunny",Roaring 4,68,166,N,,BioMark,
+49,8/8/19,12:32,"Calm, sunny",Roaring 4,68,72,N,YOY,,
+50,8/8/19,14:10,"Calm, sunny",Roaring 5,,69,N,,,
+51,8/8/19,14:10,"Calm, sunny",Roaring 5,,116,N,,,
+52,8/8/19,14:10,"Calm, sunny",Roaring 5,,129,N,,,
+53,8/8/19,14:10,"Calm, sunny",Roaring 5,,182,N,,BioMark,
+54,8/9/19,8:39,"Calm, sunny",Fourmile 1,64,125,N,,,
+55,8/9/19,8:39,"Calm, sunny",Fourmile 1,64,80,N,,,yoy?
+56,8/9/19,8:39,"Calm, sunny",Fourmile 1,64,115,N,,,
+57,8/9/19,8:39,"Calm, sunny",Fourmile 1,64,144,N,,,
+58,8/9/19,9:46,"Calm, sunny",Fourmile 1,64,173,N,,BioMark,
+59,8/9/19,9:46,"Calm, sunny",Fourmile 1,64,149,N,,,
+60,8/9/19,9:46,"Calm, sunny",Fourmile 1,64,68,N,YOY,,dropped
+61,8/9/19,9:46,"Calm, sunny",Fourmile 1,64,63,N,YOY,BioMark,
+62,8/9/19,10:42,"Calm, sunny",Fourmile 2,18.5,62,N,YOY,,
+63,8/9/19,10:42,"Calm, sunny",Fourmile 2,18.5,42,N,YOY,,
+64,8/9/19,10:42,"Calm, sunny",Fourmile 2,18.5,101,N,,BioMark,
+65,8/9/19,10:42,"Calm, sunny",Fourmile 2,18.5,58,N,YOY,,
+66,8/9/19,10:42,"Calm, sunny",Fourmile 2,18.5,55,N,YOY,BioMark,
+67,8/9/19,11:05,"Calm, sunny",Fourmile 2,18.5,54,N,YOY,,
+68,8/9/19,11:05,"Calm, sunny",Fourmile 2,18.5,93,N,,,
+69,8/9/19,11:05,"Calm, sunny",Fourmile 2,18.5,108,N,,,
+70,8/9/19,12:10,"Calm, sunny",Fourmile 3,18.4,165,N,,,
+71,8/9/19,12:10,"Calm, sunny",Fourmile 3,18.4,165,N,,BioMark,
+72,8/9/19,12:10,"Calm, sunny",Fourmile 3,18.4,146,N,,,
+73,8/9/19,12:10,"Calm, sunny",Fourmile 3,18.4,125,N,,,died; body cavity filled with blood
+74,8/9/19,12:49,"Calm, sunny",Fourmile 3,18.4,69,N,YOY,,
+75,8/9/19,12:49,"Calm, sunny",Fourmile 3,18.4,61,N,YOY,,
+76,8/9/19,12:49,"Calm, sunny",Fourmile 3,18.4,75,N,YOY,BioMark,
+77,8/9/19,12:49,"Calm, sunny",Fourmile 3,18.4,65,N,YOY,,
+78,8/9/19,14:00,"Calm, sunny",Fourmile 4,18.6,63,N,YOY,,
+79,8/9/19,14:00,"Calm, sunny",Fourmile 4,18.6,129,N,,,
+80,8/9/19,14:00,"Calm, sunny",Fourmile 4,18.6,54,N,YOY,BioMark,
+81,8/9/19,14:00,"Calm, sunny",Fourmile 4,18.6,136,N,,,dropped
+82,8/9/19,14:39,"Calm, sunny",Fourmile 4,18.6,54,N,YOY,,shock mort
+83,8/9/19,14:39,"Calm, sunny",Fourmile 4,18.6,53,N,,,dropped
+84,8/9/19,14:39,"Calm, sunny",Fourmile 4,18.6,127,N,,,
+85,8/9/19,14:39,"Calm, sunny",Fourmile 4,18.6,175,N,,BioMark,
+86,8/9/19,15:20,"Calm, sunny",Fourmile 5,19.2,70,N,YOY,,
+87,8/9/19,15:20,"Calm, sunny",Fourmile 5,19.2,64,N,YOY,,
+88,8/9/19,15:20,"Calm, sunny",Fourmile 5,19.2,74,N,YOY,BioMark,
+89,8/9/19,15:20,"Calm, sunny",Fourmile 5,19.2,52,N,YOY,,
+90,8/9/19,16:00,"Calm, sunny",Fourmile 5,19.2,60,N,YOY,,
+91,8/9/19,16:00,"Calm, sunny",Fourmile 5,19.2,134,N,,,2nd fish
+92,8/9/19,16:00,"Calm, sunny",Fourmile 5,19.2,164,N,,BioMark,2nd fish
+93,8/9/19,16:00,"Calm, sunny",Fourmile 5,19.2,124,N,,,
+94,8/9/19,16:00,"Calm, sunny",Fourmile 5,19.2,133,N,,,
+95,8/12/19,9:00,"Calm, sunny",West 1,16.1,73,N,YOY,,
+96,8/12/19,9:00,"Calm, sunny",West 1,16.1,77,N,YOY,,
+97,8/12/19,9:00,"Calm, sunny",West 1,16.1,78,N,YOY,,dirt on gills
+98,8/12/19,9:00,"Calm, sunny",West 1,16.1,77,N,YOY,BioMark,
+99,8/12/19,9:00,"Calm, sunny",West 1,16.1,91,N,,,
+100,8/12/19,9:00,"Calm, sunny",West 1,16.1,135,N,,,
+101,8/12/19,9:00,"Calm, sunny",West 1,16.1,153,N,,BioMark,
+102,8/12/19,9:00,"Calm, sunny",West 1,16.1,101,N,,,
+103,8/12/19,10:54,"Calm, sunny",West 2,16,64,N,YOY,,
+104,8/12/19,10:54,"Calm, sunny",West 2,16,66,N,YOY,,
+105,8/12/19,10:54,"Calm, sunny",West 2,16,130,N,,,
+106,8/12/19,10:54,"Calm, sunny",West 2,16,72,N,YOY,BioMark,
+107,8/12/19,11:28,"Calm, sunny",West 2,16,139,N,,BioMark,
+108,8/12/19,11:28,"Calm, sunny",West 2,16,70,N,YOY,,
+109,8/12/19,11:28,"Calm, sunny",West 2,16,99,N,,,
+110,8/12/19,11:28,"Calm, sunny",West 2,16,110,N,,,
+111,8/12/19,12:00,"Calm, sunny",West 3,15.7,72,N,YOY,BioMark,
+112,8/12/19,12:00,"Calm, sunny",West 3,15.7,56,N,YOY,,
+113,8/12/19,12:00,"Calm, sunny",West 3,15.7,69,N,YOY,,
+114,8/12/19,12:00,"Calm, sunny",West 3,15.7,63,N,YOY,,
+115,8/12/19,12:45,"Calm, sunny",West 3,15.7,137,N,,,PREVIOUSLY CLIPPED
+116,8/12/19,12:45,"Calm, sunny",West 3,15.7,175,N,,BioMark,PREVIOUSLY CLIPPED; DROPPED
+117,8/12/19,12:45,"Calm, sunny",West 3,15.7,92,N,,,DROPPED AFTER GILL CLIP
+118,8/12/19,12:45,"Calm, sunny",West 3,15.7,95,N,,,
+119,8/12/19,13:46,"Calm, sunny",West 4,17.6,76,N,YOY,,
+120,8/12/19,13:46,"Calm, sunny",West 4,17.6,140,N,,,
+121,8/12/19,13:46,"Calm, sunny",West 4,17.6,150,N,,,
+122,8/12/19,13:46,"Calm, sunny",West 4,17.6,221,N,,BioMark,
+123,8/12/19,14:18,"Calm, sunny",West 4,17.6,134,N,,,
+124,8/12/19,14:18,"Calm, sunny",West 4,17.6,73,N,YOY,,
+125,8/12/19,14:18,"Calm, sunny",West 4,17.6,83,N,YOY,BioMark,
+126,8/12/19,14:18,"Calm, sunny",West 4,17.6,75,N,YOY,,
+127,8/12/19,15:21,"Calm, sunny",West 5,16.9,74,N,YOY,BioMark,
+128,8/12/19,15:21,"Calm, sunny",West 5,16.9,92,N,,,
+129,8/12/19,15:21,"Calm, sunny",West 5,16.9,94,N,,BioMark,
+130,8/12/19,15:21,"Calm, sunny",West 5,16.9,167,N,,,
+131,8/12/19,15:52,"Calm, sunny",West 5,16.9,96,N,,,
+132,8/12/19,15:52,"Calm, sunny",West 5,16.9,67,N,YOY,,
+133,8/12/19,15:52,"Calm, sunny",West 5,16.9,67,N,YOY,,
+134,8/12/19,15:52,"Calm, sunny",West 5,16.9,60,N,YOY,,
+135,8/13/19,10:20,Clouds/drizzle,Avery below,17.1,118,N,,,
+136,8/13/19,10:20,Clouds/drizzle,Avery below,17.1,100,N,,,
+137,8/6/19,9:22,"Calm, sunny",Roaring 1,60,104,Y,,BioMark,
+138,8/6/19,9:22,"Calm, sunny",Roaring 1,60,58,Y,YOY,BioMark,POSSIBILITY THAT INTERIOR ORGANS TOUCHED EXTERIOR SURFACE OF FISH
+139,8/6/19,10:34,"Calm, sunny",Roaring 2,63,111,Y,,BioMark,hind kidney with head kidney
+140,8/6/19,10:34,"Calm, sunny",Roaring 2,63,43,Y,YOY,BioMark,sat in bucket for a while; no heart; just hind kidney
+141,8/6/19,12:00,"Calm, sunny",Roaring 3,59,73,Y,,BioMark,fatty spleen
+142,8/6/19,12:30,"Calm, sunny",Roaring 3,59,170,Y,,BioMark - internal and gill,dropped
+146,8/6/19,16:30,"Calm, sunny",Roaring 5,65,56,Y,YOY,BioMark - internal and gill,
+147,8/8/19,11:30,"Calm, sunny",Roaring 4,68,59,Y,YOY,BioMark,
+148,8/8/19,12:32,"Calm, sunny",Roaring 4,68,78,Y,,BioMark,
+149,8/8/19,14:10,"Calm, sunny",Roaring 5,,151,Y,,BioMark,male
+150,8/9/19,8:39,"Calm, sunny",Fourmile 1,64,134,Y,,BioMark,female
+151,8/9/19,9:46,"Calm, sunny",Fourmile 1,64,66,Y,YOY,BioMark - internal and gill,
+152,8/9/19,11:05,"Calm, sunny",Fourmile 2,18.5,60,Y,YOY,BioMark,DOA
+153,8/9/19,11:05,"Calm, sunny",Fourmile 2,18.5,87,Y,,BioMark,male
+154,8/9/19,12:10,"Calm, sunny",Fourmile 3,18.4,112,Y,,BioMark,female
+155,8/9/19,12:49,"Calm, sunny",Fourmile 3,18.4,59,Y,YOY,BioMark,
+156,8/9/19,14:00,"Calm, sunny",Fourmile 4,18.6,59,Y,YOY,BioMark,shock mort
+157,8/9/19,14:39,"Calm, sunny",Fourmile 4,18.6,133,Y,,BioMark,male
+158,8/9/19,15:20,"Calm, sunny",Fourmile 5,19.2,148,Y,,BioMark - internal and gill,male
+159,8/9/19,16:00,"Calm, sunny",Fourmile 5,19.2,58,Y,YOY,BioMark,
+160,8/12/19,9:00,"Calm, sunny",West 1,16.1,138,Y,,BioMark - internal and gill,
+161,8/12/19,9:00,"Calm, sunny",West 1,16.1,63,Y,YOY,BioMark,
+162,8/12/19,10:54,"Calm, sunny",West 2,16,61,Y,YOY,BioMark,SHOCK MORT; MALE
+163,8/12/19,11:28,"Calm, sunny",West 2,16,112,Y,,BioMark,FEMALE
+164,8/12/19,12:00,"Calm, sunny",West 3,15.7,71,Y,YOY,BioMark,SPLEEN TOUCHED OUTSIDE OF BODY; MALE?
+165,8/12/19,12:45,"Calm, sunny",West 3,15.7,93,Y,,BioMark,MALE?
+166,8/12/19,13:46,"Calm, sunny",West 4,17.6,141,Y,,BioMark,
+167,8/12/19,14:18,"Calm, sunny",West 4,17.6,72,Y,YOY,BioMark,MALE?
+168,8/12/19,15:21,"Calm, sunny",West 5,16.9,56,Y,YOY,BioMark - internal and gill,SPINAL DEFORMITY
+169,8/12/19,15:52,"Calm, sunny",West 5,16.9,185,Y,,BioMark,FEMALE
+170,8/13/19,10:20,Clouds/drizzle,Avery below,17.1,105,Y,,,MALE
+171,8/13/19,10:20,Clouds/drizzle,Avery below,17.1,116,N,,,
+172,8/13/19,10:20,Clouds/drizzle,Avery below,17.1,113,N,,,
+173,8/13/19,10:50,Clouds/drizzle,Avery below,17.1,67,N,YOY,,
+174,8/13/19,10:50,Clouds/drizzle,Avery below,17.1,83,N,YOY,BioMark,
+175,8/13/19,10:50,Clouds/drizzle,Avery below,17.1,68,N,YOY,,
+176,8/13/19,10:50,Clouds/drizzle,Avery below,17.1,67,N,YOY,,
+177,8/13/19,11:44,Rain,Avery above,17.1,130,N,,,
+178,8/13/19,11:44,Rain,Avery above,17.1,67,N,YOY,,
+179,8/13/19,11:44,Rain,Avery above,17.1,143,N,,,
+180,8/13/19,11:44,Rain,Avery above,17.1,82,N,YOY,,
+181,8/13/19,12:14,Rain,Avery above,17.1,137,N,,BioMark,
+182,8/13/19,12:14,Rain,Avery above,17.1,122,N,,,
+183,8/13/19,12:14,Rain,Avery above,17.1,69,N,YOY,,
+184,8/13/19,12:14,Rain,Avery above,17.1,76,N,YOY,,
+185,8/13/19,13:32,Cloudy,West Whately,16.7,70,N,YOY,,
+186,8/13/19,13:32,Cloudy,West Whately,16.7,63,N,YOY,,
+187,8/13/19,13:32,Cloudy,West Whately,16.7,47,N,YOY,,
+188,8/13/19,13:32,Cloudy,West Whately,16.7,116,N,,,
+189,8/13/19,13:55,Cloudy,West Whately,16.7,58,N,YOY,,
+190,8/13/19,13:55,Cloudy,West Whately,16.7,114,N,,,
+193,8/13/19,13:55,Cloudy,West Whately,16.7,95,N,,,
+194,8/13/19,13:55,Cloudy,West Whately,16.7,133,N,,BioMark,
+200,8/13/19,10:50,Clouds/drizzle,Avery below,17.1,67,Y,YOY,,SHOCK MORT; LOST FISH BEFORE FIN CLIPPED!
+201,8/13/19,10:50,Clouds/drizzle,Avery below,17.1,91,Y,YOY,,FEMALE
+202,8/13/19,11:44,Rain,Avery above,17.1,140,Y,,,MALE
+203,8/13/19,12:14,Rain,Avery above,17.1,64,Y,YOY,,MALE
+204,8/13/19,13:32,Cloudy,West Whately,16.7,132,Y,,,MALE
+205,8/13/19,13:55,Cloudy,West Whately,16.7,53,Y,YOY,,
