@@ -8,76 +8,52 @@ library(expm)
 library(ggplot2)
 library(dplyr)
 library(reshape2)
-setwd("~/Smith Conservation Fellow/Smith BKT Data/R Smith")
 
 ## Define parameters
-p <- 0.5
-t <- 1.0
+p <- 0.5  #pathogen prevalence or likelihood of presence or virulence degree
+t <- 10  #temperature
 
-### Fecundity by population/movement
+### Fecundity by and between populations (a,b) 
 Fa <- 1.5
 Fb <- 2.5
 Fab <- 0.5
 Fba <- 0.3
 
-### Survival by population/stage
-Sa0 <- function(p,t){0.5 + p * -0.1 + t * -0.2}
-Sa1 <- function(p,t){0.6 + p * -0.1 + t * -0.2}
-Sb0 <- function(p,t){0.4 + p * -0.1 + t * -0.2}
-Sb1 <- function(p,t){0.5 + p * -0.1 + t * -0.2}
+### Survival by population/stage (0, 1+)
+Sa0 <- function(p,t){0.5 + p * -0.1 + t * -.04}
+Sa1 <- function(p,t){0.6 + p * -0.1 + t * -.02}
+Sb0 <- function(p,t){0.5 + p * -0.1 + t * -.04}
+Sb1 <- function(p,t){0.5 + p * -0.1 + t * -.02}
 
 ### Movement by population/stage
-Mab0 <- function(p,t){0.3 + p * -0.1 + t * -0.2}
-Mab1 <- function(p,t){0.4 + p * -0.1 + t * -0.2}
-Mba0 <- function(p,t){0.35 + p * -0.1 + t * -0.2}
-Mba1 <- function(p,t){0.3 + p * -0.1 + t * -0.2}
+Mab0 <- function(p,t){0.3 + p * -0.1 + t * -.02}
+Mab1 <- function(p,t){0.4 + p * -0.1 + t * -.02}
+Mba0 <- function(p,t){0.35 + p * -0.1 + t * -.02}
+Mba1 <- function(p,t){0.3 + p * -0.1 + t * -.02}
 
 ## Create our matrix
 mtx <- function(p,t){
   out <- matrix(
-        c(0.0, Sa0(p,t), 0.0, Mab0(p,t),
+        c(0, Sa0(p,t), 0, Mab0(p,t),
         Fa, Sa1(p,t), Fab, Mab1(p,t),
-        0.0, Mba0(p,t), 0.0, Sb0(p,t),
+        0, Mba0(p,t), 0, Sb0(p,t),
         Fba, Mba1(p,t), Fb, Sb1(p,t)),
       nrow=4)
 }
-mtx1 <- mtx(p,t)
+mtx1 <- mtx(p,t) #test it
+mtx1
 
-## Characterize population attributes
+## Characterize population attributes (r, stable stage structure)
 eigen(mtx1)
 
-## Create vector of age distributions, Pops A&B
-pop.age 
-mat[,1]<-c(20,50,40,30)
-pop.age
-
-## Multiply matrix by vector for one cycle
-result.1cyc <- mtx %*% pop.age
-result.1cyc
-
-result.2cyc <- (mtx %^% 2) %*% pop.age
-result.2cyc
-
-
-## Loop by year and store values in matrix
-
 ### Create empty matrix to store values per year for 100 years
-mat <- matrix(,nrow=4, ncol=100)
+mat <- matrix(, nrow=4, ncol=100)
+mat[,1]<-c(20,50,40,30) #initial population structure
 
-
-# loop over p and t
-for(k in p){
-  
-  mat[,i]
-  ### Loop over 100 years
-  for(i in 2:100){
-    #mat[,i] = (mtx %^% i) %*% pop.age
-    mat[,i] <- mtx(k,j) %*% mat[,i-1]
-    #mat[,i,k]
+### Loop over 100 years
+for(i in 2:100){
+    mat[,i] <- mtx(p,t) %*% mat[,i-1]
   }
-  output
-}
-  
 
 ### Plot age distributions in 2 populations over time
 pop.100 <- as.data.frame(mat)
@@ -101,6 +77,9 @@ ggplot(pop.df2, aes(x=variable, y=log10(value), fill=pop)) +
   labs(y="Population size", x="Cycle") +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
-
-
+## Next - vary the parameter vales along a gradiet and observe how varying magnitude of effects impacts population structure and resilience
+# loop over p and t
+# e.g., p <- seq(0.2, 0.9, 2.5); for(k in p){...
+  
+  
 
