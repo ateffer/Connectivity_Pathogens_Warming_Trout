@@ -77,7 +77,8 @@ ggplot(pop.df2, aes(x=variable, y=log10(value), fill=pop)) +
   labs(y="Population size", x="Cycle") +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
-## Next - vary the parameter vales along a gradiet and observe how varying magnitude of effects impacts population structure and resilience
+## Next - vary the parameter vales along a gradiet and observe how 
+## varying magnitude of effects impacts population structure and resilience
 # loop over p and t
 # e.g., p <- seq(0.2, 0.9, 2.5); for(k in p){...
   
