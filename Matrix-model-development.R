@@ -10,26 +10,28 @@ library(dplyr)
 library(reshape2)
 
 ## Define parameters
-p <- 0.5  #pathogen prevalence or likelihood of presence or virulence degree
-t <- 10  #temperature
+#p = .5
+#t = 10
+p <- seq(0, 0.3, 0.1)  #pathogen prevalence or likelihood of presence or virulence degree
+t <- seq(-1, 2, 1)  #temperature anomaly
 
 ### Fecundity by and between populations (a,b) 
-Fa <- 1.5
-Fb <- 2.5
+Fa <- .75
+Fb <- .8
 Fab <- 0.5
 Fba <- 0.3
 
 ### Survival by population/stage (0, 1+)
-Sa0 <- function(p,t){0.5 + p * -0.1 + t * -.04}
-Sa1 <- function(p,t){0.6 + p * -0.1 + t * -.02}
-Sb0 <- function(p,t){0.5 + p * -0.1 + t * -.04}
-Sb1 <- function(p,t){0.5 + p * -0.1 + t * -.02}
+Sa0 <- function(p,t){0.3 + p * -0.1 + t * -.2}
+Sa1 <- function(p,t){0.4 + p * -0.1 + t * -.1}
+Sb0 <- function(p,t){0.2 + p * -0.1 + t * -.1}
+Sb1 <- function(p,t){0.1 + p * -0.1 + t * -.2}
 
 ### Movement by population/stage
-Mab0 <- function(p,t){0.3 + p * -0.1 + t * -.02}
-Mab1 <- function(p,t){0.4 + p * -0.1 + t * -.02}
-Mba0 <- function(p,t){0.35 + p * -0.1 + t * -.02}
-Mba1 <- function(p,t){0.3 + p * -0.1 + t * -.02}
+Mab0 <- function(p,t){0.2 + p * -0.1 + t * -.2}
+Mab1 <- function(p,t){0.2 + p * -0.1 + t * -.2}
+Mba0 <- function(p,t){0.3 + p * -0.1 + t * -.2}
+Mba1 <- function(p,t){0.1 + p * -0.1 + t * -.2}
 
 ## Create our matrix
 mtx <- function(p,t){
@@ -49,11 +51,16 @@ eigen(mtx1)
 ### Create empty matrix to store values per year for 100 years
 mat <- matrix(, nrow=4, ncol=100)
 mat[,1]<-c(20,50,40,30) #initial population structure
+rw <- c(1:4)
 
 ### Loop over 100 years
 for(i in 2:100){
-    mat[,i] <- mtx(p,t) %*% mat[,i-1]
+  for (j in p) {
+    for (k in t) {
+      mat[,i] <- mtx(j,k) %*% mat[,i-1]
+    }
   }
+}
 
 ### Plot age distributions in 2 populations over time
 pop.100 <- as.data.frame(mat)
@@ -71,13 +78,8 @@ ggplot(pop.df2, aes(x=variable, y=value, fill=pop)) +
   labs(y="Population size", x="Cycle") +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
-### Plot population size change over 100 cycles - log pop size
-ggplot(pop.df2, aes(x=variable, y=log10(value), fill=pop)) + 
-  geom_bar(stat = "identity") +
-  labs(y="Population size", x="Cycle") +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
-## Next - vary the parameter vales along a gradiet and observe how 
+## Next - vary the parameter values along a gradiet and observe how 
 ## varying magnitude of effects impacts population structure and resilience
 # loop over p and t
 # e.g., p <- seq(0.2, 0.9, 2.5); for(k in p){...
