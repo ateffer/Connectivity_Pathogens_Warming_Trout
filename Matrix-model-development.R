@@ -10,8 +10,8 @@ library(dplyr)
 library(reshape2)
 
 ## Define parameters
-#p = .5
-#t = 10
+p = 0.5
+t = 1.0
 p <- seq(0, 0.3, 0.1)  #pathogen prevalence or likelihood of presence or virulence degree
 t <- seq(-1, 2, 1)  #temperature anomaly
 
@@ -48,17 +48,33 @@ mtx1
 ## Characterize population attributes (r, stable stage structure)
 eigen(mtx1)
 
-### Create empty matrix to store values per year for 100 years
-mat <- matrix(, nrow=4, ncol=100)
-mat[,1]<-c(20,50,40,30) #initial population structure
-rw <- c(1:4)
 
-### Loop over 100 years
-for(i in 2:100){
-  for (j in p) {
-    for (k in t) {
+### Create empty matrix to store values per year for 100 years
+ #initial population structure: 20,50,40,30
+### Loop over 100 years per parameter
+
+
+Q <- 100
+Z <- 0
+W <- length(p)*length(t)*Q
+
+dat <- tibble(j=NA, k=NA, i=NA, mat1 = NA, mat2 = NA, mat3 = NA, mat4 = NA, .rows=W)
+
+for (j in p) {
+  for (k in t) {
+    mat <- matrix(NA, nrow=4, ncol=100)
+    mat[,1]<-c(20,50,40,30)
+    for(i in 2:Q){
       mat[,i] <- mtx(j,k) %*% mat[,i-1]
-    }
+      Z = Z+1
+      dat$j[Z] <- j
+      dat$k[Z] <- k
+      dat$i[Z] <- i
+      dat$mat1[Z] <- mat[1,i]
+      dat$mat2[Z] <- mat[2,i]
+      dat$mat3[Z] <- mat[3,i]
+      dat$mat4[Z] <- mat[4,i]
+    } 
   }
 }
 
@@ -78,11 +94,7 @@ ggplot(pop.df2, aes(x=variable, y=value, fill=pop)) +
   labs(y="Population size", x="Cycle") +
   theme(axis.text.x = element_text(angle = 90, hjust = 1))
 
-
-## Next - vary the parameter values along a gradiet and observe how 
-## varying magnitude of effects impacts population structure and resilience
-# loop over p and t
-# e.g., p <- seq(0.2, 0.9, 2.5); for(k in p){...
+#Next - identify parameter values that give r ~ 0.98-1.02 - heatmap to find sweet spot
   
   
 
