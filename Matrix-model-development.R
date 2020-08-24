@@ -47,36 +47,44 @@ mtx1
 
 ## Characterize population attributes (r, stable stage structure)
 eigen(mtx1)
-
+eigen(mtx(p,t))$values[1]
 
 ### Create empty matrix to store values per year for 100 years
- #initial population structure: 20,50,40,30
-### Loop over 100 years per parameter
+#### Initial population structure: 20,50,40,30
+#### Loop over 100 years per parameter
 
+Q <- 100  # years
+Z <- 0  # starting row for building matrix
+W <- length(p) * length(t)*Q  # total rows in output matrix is number of values in P and T
 
-Q <- 100
-Z <- 0
-W <- length(p)*length(t)*Q
+#### Create matrix to hold loop output - name columns
+dat <- tibble(j=NA, k=NA, i=NA, eig = NA, mat1 = NA, mat2 = NA, mat3 = NA, mat4 = NA, .rows=W)
 
-dat <- tibble(j=NA, k=NA, i=NA, mat1 = NA, mat2 = NA, mat3 = NA, mat4 = NA, .rows=W)
-
-for (j in p) {
-  for (k in t) {
-    mat <- matrix(NA, nrow=4, ncol=100)
-    mat[,1]<-c(20,50,40,30)
-    for(i in 2:Q){
-      mat[,i] <- mtx(j,k) %*% mat[,i-1]
-      Z = Z+1
-      dat$j[Z] <- j
-      dat$k[Z] <- k
-      dat$i[Z] <- i
-      dat$mat1[Z] <- mat[1,i]
+for (j in p) {                            # for each level of the pathogen metric set
+  for (k in t) {                          # for each level of temperature anomaly set
+    mat <- matrix(NA, nrow=4, ncol=100)   # 4x100 matrix of population structure per year
+    mat[,1] <- c(20,50,40,30)             # initial population structure
+    for(i in 2:Q){                        # beginning with 2nd year up to 100
+      mat[,i] <- mtx(j,k) %*% mat[,i-1]   # apply mtx fxn to the previous col in mat (pop str) and fill in current col with output
+      Z = Z+1                             # Increase Z by 1 (next step for outter matrix, e.g. 0+1)
+      dat$j[Z] <- j                       # put current "j" in the Z row of dat in j col
+      dat$k[Z] <- k                       # put current "k" in the Z row of dat in k col
+      dat$i[Z] <- i                       # put current "i" in the Z row of dat in i col
+      dat$eig[Z] <- eigen(mtx(j,k))$values[1]
+      dat$mat1[Z] <- mat[1,i]             # put the new pop str for iteration i in the final 4 col
       dat$mat2[Z] <- mat[2,i]
       dat$mat3[Z] <- mat[3,i]
       dat$mat4[Z] <- mat[4,i]
     } 
   }
 }
+
+
+library(ggplot2)
+dat2<-data.frame(dat)
+#Next - identify parameter values that give r ~ 0.98-1.02 - heatmap to find sweet spot
+
+
 
 ### Plot age distributions in 2 populations over time
 pop.100 <- as.data.frame(mat)
