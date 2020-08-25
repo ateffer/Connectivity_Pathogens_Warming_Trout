@@ -8,32 +8,33 @@ library(expm)
 library(ggplot2)
 library(dplyr)
 library(reshape2)
+library(plotly)
 
 ## Define parameters
-p = 0.5
-t = 1.0
-p <- seq(0, 0.3, 0.1)  #pathogen prevalence or likelihood of presence or virulence degree
-t <- seq(-1, 2, 1)  #temperature anomaly
+p = 0.5  # prevalence or other pathogen metric, 0-1 (current "optimal" pathogen metric = 0.775, moderately prevalent agent but affect pop at at very high prev)
+t = 0.00  # absolute value of degrees away from optimal. Current optimal temp anomaly = 0
+p <- seq(0.0, 1.0, 0.2)  # pathogen prevalence or likelihood of presence or virulence degree - j as each level
+t <- seq(0.0, 2.0, 0.2)  # temperature anomaly - k as each level
 
-### Fecundity by and between populations (a,b) 
-Fa <- .75
-Fb <- .8
-Fab <- 0.5
-Fba <- 0.3
+### Fecundity within and between populations (a,b) 
+Fa <- 0.7
+Fb <- 0.7
+Fab <- 0.7
+Fba <- 0.7
 
 ### Survival by population/stage (0, 1+)
-Sa0 <- function(p,t){0.3 + p * -0.1 + t * -.2}
-Sa1 <- function(p,t){0.4 + p * -0.1 + t * -.1}
-Sb0 <- function(p,t){0.2 + p * -0.1 + t * -.1}
-Sb1 <- function(p,t){0.1 + p * -0.1 + t * -.2}
+Sa0 <- function(p,t){0.8 - p * 0.7 - t * 0.02}
+Sa1 <- function(p,t){0.8 - p * 0.7 - t * 0.02}
+Sb0 <- function(p,t){0.8 - p * 0.7 - t * 0.02}
+Sb1 <- function(p,t){0.8 - p * 0.7 - t * 0.02}
 
 ### Movement by population/stage
-Mab0 <- function(p,t){0.2 + p * -0.1 + t * -.2}
-Mab1 <- function(p,t){0.2 + p * -0.1 + t * -.2}
-Mba0 <- function(p,t){0.3 + p * -0.1 + t * -.2}
-Mba1 <- function(p,t){0.1 + p * -0.1 + t * -.2}
+Mab0 <- function(p,t){0.5 - p * 0.4 - t * 0.05}
+Mab1 <- function(p,t){0.7 - p * 0.4 - t * 0.05}
+Mba0 <- function(p,t){0.5 - p * 0.4 - t * 0.05}
+Mba1 <- function(p,t){0.7 - p * 0.4 - t * 0.05}
 
-## Create our matrix
+## Create our matrix (take the blue pill)
 mtx <- function(p,t){
   out <- matrix(
         c(0, Sa0(p,t), 0, Mab0(p,t),
@@ -42,12 +43,13 @@ mtx <- function(p,t){
         Fba, Mba1(p,t), Fb, Sb1(p,t)),
       nrow=4)
 }
+
 mtx1 <- mtx(p,t) #test it
 mtx1
 
 ## Characterize population attributes (r, stable stage structure)
 eigen(mtx1)
-eigen(mtx(p,t))$values[1]
+eigen(mtx(p,t))$values[1]  #extract value
 
 ### Create empty matrix to store values per year for 100 years
 #### Initial population structure: 20,50,40,30
@@ -79,13 +81,28 @@ for (j in p) {                            # for each level of the pathogen metri
   }
 }
 
-
-library(ggplot2)
+### r ~ 0.98-1.02 for sweet spot of population stability
+### Plot heatmap to identify optimal parameter values
 dat2<-data.frame(dat)
-#Next - identify parameter values that give r ~ 0.98-1.02 - heatmap to find sweet spot
+names(dat2)
+ggplot(dat2) +
+  geom_tile(aes(j, k, fill=eig))
+
+### Eaxamine relationship of eigenvalue (r) with pathogen and temperature metrics
+ggplot(dat2) +
+  geom_point(aes(j, eig))
+ggplot(dat2) +
+  geom_point(aes(k, eig))
+plot_ly(dat2, x=~k, y=~j, z=~eig, type="scatter3d", mode="markers", color=~eig)
 
 
 
+
+
+
+
+
+### Bonus plots - ignore
 ### Plot age distributions in 2 populations over time
 pop.100 <- as.data.frame(mat)
 rownames(pop.100) <- c("PopA0", "PopA1", "PopB0", "PopB1")
